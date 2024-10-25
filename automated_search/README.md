@@ -1,0 +1,1 @@
+This project is for practicing automated search: selecting options, verifying and storing results, opening tabs.
