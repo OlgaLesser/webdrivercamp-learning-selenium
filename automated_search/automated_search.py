@@ -27,7 +27,7 @@ verify_rolex_in_results(driver)
 
 def get_results_info(driver_):
     results = []
-    search_results = driver.find_elements(By.CSS_SELECTOR, ".s-item")
+    search_results = driver_.find_elements(By.CSS_SELECTOR, ".s-item")
     filtered_list = [item for item in search_results if item.text]  # filters empty results
     try:
         for result_ in filtered_list[:2]:
@@ -63,15 +63,15 @@ search.click()
 search = driver.find_element(By.XPATH, "//li[@class='x-refine__main__list--value' and @name='Brand']//input[@aria-label='Casio']")
 search.click()
 
-def verify_casio_in_results(driver_1):
-    results = driver_1.find_elements(By.CSS_SELECTOR, ".s-item__title >span")
+def verify_casio_in_results(driver_):
+    results = driver_.find_elements(By.CSS_SELECTOR, ".s-item__title >span")
     filtered_list = [item for item in results if item.text] #filters empty results
     casio_mismatches = []
     for x, result_ in enumerate(filtered_list[-2:]):
         title = result_.text.lower()
         print(title)
         if "casio" not in title:
-            casio_mismatches.append(f"Expected 'Casio' in title {x + 3}, but got '{title}'")
+            casio_mismatches.append(f"Expected 'Casio' in title {x + 1}, but got '{title}'")
     if casio_mismatches:
         print("Mismatches for Casio:")
         for mismatch in casio_mismatches:
