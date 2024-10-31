@@ -1,2 +1,8 @@
 venv/
 .idea/
+/selenium_basics/0_main.py
+/selenium_basics/1_main.py
+/selenium_basics/2_main.py
+/selenium_basics/3_main.py
+/selenium_basics/4_main.py
+/selenium_basics/components/__pycache__/
