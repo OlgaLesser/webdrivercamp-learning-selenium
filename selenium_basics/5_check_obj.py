@@ -1,13 +1,17 @@
+from components.filter import LeftFilter
+from components import base
+
+
 def check_obj(obj, class_):
     return isinstance(obj, class_)
 
 
 if __name__ == "__main__":
-    from components.filter import LeftFilter
-    from components import base
 
     class Base:
         pass
+
+
     another_base = Base()
     some_list = [1, 2]
     left_filter = LeftFilter("")
